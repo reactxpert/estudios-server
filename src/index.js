@@ -6,6 +6,9 @@ import morgan from 'morgan'
 // defining the Express app
 const app = express()
 
+// defining port
+const PORT = process.env.PORT || 3000;
+
 // adding Helmet to enhance your API's security
 app.use(helmet())
 
@@ -23,6 +26,6 @@ app.get('/check', (req, res) => {
 })
 
 // starting the server
-app.listen(3001, () => {
-  console.log('listening on port 3001')
+app.listen(PORT, () => {
+  console.log(`listening on port ${PORT}`)
 })
